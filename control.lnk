@@ -1,0 +1,5 @@
+system windows
+file control.obj
+library shell
+option modname=CONTROL
+option description 'Windows 3.1 Control Panel'

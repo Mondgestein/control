@@ -1,0 +1,38 @@
+/*
+
+    Windows Control Panel
+
+    Copyright (c) 2024 Ricardo Hanke
+
+    Released under the terms of the GNU General Public License.
+    See the file 'COPYING' in the main directory for details.
+
+*/
+
+#include "control.h"
+
+
+MAINMENU MENU PRELOAD MOVEABLE DISCARDABLE
+BEGIN
+    POPUP "&Settings"
+    BEGIN
+        MENUITEM "E&xit", IDM_FILE_EXIT
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Contents", IDM_HELP_INDEX
+        MENUITEM "&Search for Help On...", IDM_HELP_SEARCH
+        MENUITEM "&How to Use Help", IDM_HELP_HELPONHELP
+        MENUITEM SEPARATOR
+        MENUITEM "&About Control Panel...", IDM_HELP_ABOUT
+    END
+END
+
+
+STRINGTABLE PRELOAD MOVEABLE DISCARDABLE
+BEGIN
+    IDS_APPNAME,   "Control Panel"
+    IDS_ERROR,     "Not enough memory available for this task.\n\nQuit one or more applications to increase available memory, and then try again."
+    IDS_NOAPPLETS, "Cannot find the Control Panel components.\n\n Verify that they are installed in your Windows System directory."
+END
+
